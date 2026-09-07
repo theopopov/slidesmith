@@ -1,0 +1,130 @@
+{
+  "_comment": "Machine-readable slide-layout vocabulary for the PLAN step. Topic-agnostic: it classifies the STRUCTURE of a beat's copy (a list, a progression, a contrast, a product drop...), never the subject. `render`=template -> engine/graphics_templates.py (deterministic). `render`=agentic -> the HTML is authored per docs/ART-DIRECTION.md (the advanced path). copy_char_budget is authored (never pixel-measured); the renderer does not auto-shrink.",
+  "schema_version": "1.0.0",
+  "priority_order": [
+    "useful_drop", "stack_diagram", "progression", "steps", "comparison", "matrix",
+    "myth_reframe", "problem_solution", "definition", "proportion", "stat", "quote",
+    "list", "statement"
+  ],
+  "_priority_note": "When several triggers fire for one beat, pick the highest-priority match that the frame's allowed_layouts permits. `statement` always matches last as the universal catch-all.",
+  "roles": {
+    "cover": {"render": "template", "builder": "cover", "copy_char_budget": 90,
+      "copy_function": "Open the hook in <=8 words (title) + a one-line promise (subtitle) + eyebrow kicker."},
+    "cta": {"render": "template", "builder": "cta", "copy_char_budget": 60,
+      "copy_function": "One directive headline + one soft ask (the CTA). One ask only, varied from recent posts."}
+  },
+  "layouts": {
+    "useful_drop": {
+      "render": "agentic",
+      "intent": "A product / release / tool card: a specific named thing the audience can use today.",
+      "trigger_signals": ["a specific named tool/repo/product is the beat", "a launch or release", "what-it-is + attribute + activity"],
+      "copy_function": "The name is the hero (headline). One line 'what it is'. A chip row: a class/category chip + an activity/metric chip. One line 'where it fits'.",
+      "copy_char_budget": 200,
+      "fallback": "statement"
+    },
+    "stack_diagram": {
+      "render": "agentic",
+      "intent": "A 'composes-with' story as a visual: a horizontal flow of token-styled tiles.",
+      "trigger_signals": ["a pipeline / composition of steps or tools", "stage -> stage -> stage", "output->input handoff"],
+      "copy_function": "3-6 short tile labels in order, joined by accent arrows. The flow IS the message; minimal surrounding words.",
+      "copy_char_budget": 140,
+      "fallback": "list"
+    },
+    "progression": {
+      "render": "agentic",
+      "intent": "Show the same metric across ordered stages/time so the change is the point.",
+      "trigger_signals": ["same metric across stages (Month 1->N, Q1->Q4)", "before->after numeric movement"],
+      "copy_function": "Staged rows, value -> value, so the delta reads at a glance.",
+      "copy_char_budget": 190,
+      "fallback": "steps"
+    },
+    "steps": {
+      "render": "agentic",
+      "intent": "An ordered / numbered sequence or process.",
+      "trigger_signals": ["1->N sequence", "'first... then...'", "how-to / setup order"],
+      "copy_function": "Label + numbered items (<=5).",
+      "copy_char_budget": 200,
+      "fallback": "list"
+    },
+    "comparison": {
+      "render": "agentic",
+      "intent": "Two contrasted sides.",
+      "trigger_signals": ["X vs Y", "us vs them", "'not X but Y'"],
+      "copy_function": "Two panels; a tag + one line each. Keep the axis of contrast identical on both sides.",
+      "copy_char_budget": 200,
+      "fallback": "statement"
+    },
+    "matrix": {
+      "render": "agentic",
+      "intent": "Two crossed dimensions -> four cells (2x2 trade-off / positioning).",
+      "trigger_signals": ["two axes", "2x2", "quadrant / positioning"],
+      "copy_function": "Axis names + four short quadrant labels.",
+      "copy_char_budget": 170,
+      "fallback": "comparison"
+    },
+    "myth_reframe": {
+      "render": "agentic",
+      "intent": "A wrong belief / common approach stated then corrected.",
+      "trigger_signals": ["'people think X'", "myth -> reality", "common approach then the fix"],
+      "copy_function": "Myth row -> reality row. The reality line carries the one emphasis.",
+      "copy_char_budget": 180,
+      "fallback": "comparison"
+    },
+    "problem_solution": {
+      "render": "agentic",
+      "intent": "An explicit pain -> fix movement in one beat.",
+      "trigger_signals": ["a named pain then its fix", "'the problem... the fix...'"],
+      "copy_function": "Problem block -> solution block; solution is the emphasis.",
+      "copy_char_budget": 190,
+      "fallback": "statement"
+    },
+    "definition": {
+      "render": "template", "builder": "statement",
+      "intent": "A concept is named and explained.",
+      "trigger_signals": ["'X is...'", "a named concept + explanation"],
+      "copy_function": "Term (title) + a 1-2 line explanation (body).",
+      "copy_char_budget": 170,
+      "fallback": "statement"
+    },
+    "proportion": {
+      "render": "template", "builder": "stat",
+      "intent": "A ratio / share is the point.",
+      "trigger_signals": ["'N in M'", "'X%'", "share of total"],
+      "copy_function": "Figure (the ratio) + a short proportion caption. Optional two-bar chart.",
+      "copy_char_budget": 120,
+      "fallback": "stat"
+    },
+    "stat": {
+      "render": "template", "builder": "stat",
+      "intent": "A single dominant number/metric carries the beat.",
+      "trigger_signals": ["one figure is the point", "a headline metric/multiple", "$/%/x figure dominates"],
+      "copy_function": "Big figure + a short caption for what it means. Add a real ECharts chart when there is series data.",
+      "copy_char_budget": 120,
+      "fallback": "statement"
+    },
+    "quote": {
+      "render": "agentic",
+      "intent": "An attributed line / testimonial is the beat.",
+      "trigger_signals": ["a maker/author quote", "a testimonial", "a pull-quote"],
+      "copy_function": "Quotation + attribution.",
+      "copy_char_budget": 180,
+      "fallback": "statement"
+    },
+    "list": {
+      "render": "agentic",
+      "intent": "Several parallel, unordered points (no sequence, no ranking).",
+      "trigger_signals": ["3+ parallel points", "capabilities list", "traits"],
+      "copy_function": "Label + <=5 bullet items.",
+      "copy_char_budget": 200,
+      "fallback": "statement"
+    },
+    "statement": {
+      "render": "template", "builder": "statement",
+      "intent": "The universal fallback: one self-contained assertion / claim / takeaway.",
+      "trigger_signals": ["a single claim with no internal structure"],
+      "copy_function": "1 headline + 1-3 short supporting lines. <=1 accent highlight word.",
+      "copy_char_budget": 160,
+      "fallback": "statement"
+    }
+  }
+}

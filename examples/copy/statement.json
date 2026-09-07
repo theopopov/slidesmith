@@ -1,0 +1,5 @@
+{
+  "eyebrow": "PRINCIPLE",
+  "title": "One brand source. No template fork.",
+  "body": "Every slide references var(--token). Change tokens.json and the whole deck re-themes at once."
+}

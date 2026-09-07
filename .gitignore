@@ -1,0 +1,10 @@
+# per-deck scratch output — regenerable, not source
+out/
+__pycache__/
+*.pyc
+.DS_Store
+.env
+
+# design/brand.css is a build artifact compiled from design/tokens.json.
+# It is committed so the repo renders out-of-the-box; regenerate with:
+#   python engine/tokens_to_css.py design/tokens.json design/brand.css

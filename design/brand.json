@@ -1,0 +1,5 @@
+{
+  "_comment": "Footer brand mark. Read by engine/graphics_templates.py (_brand()) and rendered bottom-left of every template slide as '<handle> · <tagline>' (caption/16, muted). Edit these two fields to your own mark, or set both to empty strings to render no footer mark. Agentic slides put the same mark in their own footer band per docs/ART-DIRECTION.md.",
+  "handle": "@yourhandle",
+  "tagline": "Your tagline here"
+}

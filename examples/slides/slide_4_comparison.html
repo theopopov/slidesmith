@@ -1,0 +1,56 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+/*@BRAND_CSS@*/
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden;font-family:var(--font-family-body)}
+.board{width:1080px;height:1350px;position:relative;background:var(--color-bg-page);
+  padding:var(--spacing-64);display:flex;flex-direction:column}
+.kicker{font-size:var(--font-size-kicker);font-weight:var(--font-weight-bold);letter-spacing:.08em;
+  text-transform:uppercase;color:var(--color-bg-accent)}
+.h{font-family:var(--font-family-heading);font-weight:var(--font-weight-bold);
+  font-size:var(--font-size-headline);line-height:1.04;letter-spacing:-.01em;margin-top:var(--spacing-24);
+  color:var(--color-text-default)}
+.spacer{flex:1}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:var(--spacing-24)}
+.panel{border-radius:var(--radius-card);padding:var(--spacing-40);min-height:520px;display:flex;
+  flex-direction:column}
+.left{background:var(--color-bg-surface);border:var(--border-width) solid var(--color-border-subtle)}
+.right{background:var(--color-bg-dark);color:var(--color-text-on-dark)}
+.tag{font-size:var(--font-size-kicker);font-weight:var(--font-weight-bold);letter-spacing:.06em;
+  text-transform:uppercase}
+.left .tag{color:var(--color-text-muted)}
+.right .tag{color:var(--color-text-highlight)}
+.big{font-family:var(--font-family-heading);font-weight:var(--font-weight-black);
+  font-size:var(--font-size-subhead);line-height:1.05;margin-top:var(--spacing-20)}
+.left .big{color:var(--color-text-default)}
+.right .big em{font-style:normal;color:var(--color-text-highlight)}
+.desc{font-size:var(--font-size-body);margin-top:var(--spacing-24)}
+.left .desc{color:var(--color-text-muted)}
+.right .desc{color:var(--color-text-on-dark);opacity:.85}
+.list{margin-top:auto;font-size:var(--font-size-body);line-height:1.7}
+.left .list{color:var(--color-text-default)}
+.footer{position:absolute;left:var(--spacing-64);right:var(--spacing-64);bottom:var(--spacing-40);
+  display:flex;justify-content:space-between;font-size:var(--font-size-caption);
+  font-weight:var(--font-weight-medium);color:var(--color-text-muted)}
+</style></head><body>
+<div class="board">
+  <div class="kicker">TWO PATHS</div>
+  <div class="h">Same renderer. Pick your effort.</div>
+  <div class="spacer"></div>
+  <div class="cols">
+    <div class="panel left">
+      <div class="tag">Basic · template</div>
+      <div class="big">Deterministic builders</div>
+      <div class="desc">Four fixed roles, built by a Python function. Same pixels every time.</div>
+      <div class="list">cover · stat · statement · cta</div>
+    </div>
+    <div class="panel right">
+      <div class="tag">Advanced · agentic</div>
+      <div class="big">Author <em>any</em> composition</div>
+      <div class="desc">Hand-write the HTML, drop the brand marker, render on-brand.</div>
+      <div class="list" style="opacity:.85">comparison · matrix · progression · quote · …</div>
+    </div>
+  </div>
+  <div class="spacer"></div>
+  <div class="footer"><span>@yourhandle · Your tagline here</span><span>04 / 06</span></div>
+</div>
+</body></html>

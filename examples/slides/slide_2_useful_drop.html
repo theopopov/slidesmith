@@ -1,0 +1,44 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+/*@BRAND_CSS@*/
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden;font-family:var(--font-family-body)}
+.board{width:1080px;height:1350px;position:relative;background:var(--color-bg-page);
+  padding:var(--spacing-64);display:flex;flex-direction:column}
+.kicker{font-size:var(--font-size-kicker);font-weight:var(--font-weight-bold);letter-spacing:.08em;
+  text-transform:uppercase;color:var(--color-bg-accent)}
+.spacer{flex:1}
+.card{background:var(--color-bg-surface);border:var(--border-width) solid var(--color-border-subtle);
+  border-radius:var(--radius-card);box-shadow:var(--elevation-card);padding:var(--spacing-64)}
+.name{font-family:var(--font-family-heading);font-weight:var(--font-weight-black);
+  font-size:var(--font-size-display);line-height:.95;letter-spacing:-.02em;color:var(--color-text-default)}
+.name em{font-style:normal;color:var(--color-text-highlight)}
+.what{font-size:var(--font-size-lead);color:var(--color-text-muted);margin-top:var(--spacing-24);max-width:22ch}
+.chips{display:flex;gap:var(--spacing-16);margin-top:var(--spacing-40)}
+.chip{display:inline-flex;align-items:center;gap:var(--spacing-8);padding:var(--spacing-12) var(--spacing-24);
+  border-radius:var(--radius-pill);font-size:var(--font-size-body);font-weight:var(--font-weight-semibold)}
+.chip.ok{background:var(--color-bg-accent);color:var(--color-text-on-accent)}
+.chip.meta{background:var(--color-bg-page);color:var(--color-text-default);
+  border:var(--border-width) solid var(--color-border-subtle)}
+.dot{width:14px;height:14px;border-radius:var(--radius-pill);background:var(--color-text-on-accent)}
+.fits{font-size:var(--font-size-body);color:var(--color-text-default);margin-top:var(--spacing-40)}
+.fits b{color:var(--color-text-highlight);font-weight:var(--font-weight-bold)}
+.footer{position:absolute;left:var(--spacing-64);right:var(--spacing-64);bottom:var(--spacing-40);
+  display:flex;justify-content:space-between;font-size:var(--font-size-caption);
+  font-weight:var(--font-weight-medium);color:var(--color-text-muted)}
+</style></head><body>
+<div class="board">
+  <div class="kicker">USEFUL DROP</div>
+  <div class="spacer"></div>
+  <div class="card">
+    <div class="name">Slide<em>smith</em></div>
+    <div class="what">A token-driven engine that turns HTML into on-brand 1080&times;1350 PNGs.</div>
+    <div class="chips">
+      <span class="chip ok"><span class="dot"></span>MIT licensed</span>
+      <span class="chip meta">0 runtime deps</span>
+    </div>
+    <div class="fits">Fits where a designer would sit: <b>after copy, before posting</b>.</div>
+  </div>
+  <div class="spacer"></div>
+  <div class="footer"><span>@yourhandle · Your tagline here</span><span>02 / 06</span></div>
+</div>
+</body></html>

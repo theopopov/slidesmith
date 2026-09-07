@@ -1,0 +1,36 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+/*@BRAND_CSS@*/
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden;font-family:var(--font-family-body)}
+.board{width:1080px;height:1350px;position:relative;background:var(--color-bg-page);
+  padding:var(--spacing-64);display:flex;flex-direction:column}
+.kicker{font-size:var(--font-size-kicker);font-weight:var(--font-weight-bold);letter-spacing:.08em;
+  text-transform:uppercase;color:var(--color-bg-accent)}
+.h{font-family:var(--font-family-heading);font-weight:var(--font-weight-bold);
+  font-size:var(--font-size-headline);line-height:1.04;margin-top:var(--spacing-24);color:var(--color-text-default)}
+.spacer{flex:1}
+.items{display:flex;flex-direction:column;gap:var(--spacing-32)}
+.item{display:flex;align-items:baseline;gap:var(--spacing-24);
+  font-size:var(--font-size-subhead);font-weight:var(--font-weight-semibold);color:var(--color-text-default)}
+.item .bul{flex:none;width:16px;height:16px;border-radius:var(--radius-pill);
+  background:var(--color-bg-accent);transform:translateY(-4px)}
+.item em{font-style:normal;color:var(--color-text-highlight)}
+.footer{position:absolute;left:var(--spacing-64);right:var(--spacing-64);bottom:var(--spacing-40);
+  display:flex;justify-content:space-between;font-size:var(--font-size-caption);
+  font-weight:var(--font-weight-medium);color:var(--color-text-muted)}
+</style></head><body>
+<div class="board">
+  <div class="kicker">WHAT YOU GET</div>
+  <div class="h">Batteries included.</div>
+  <div class="spacer"></div>
+  <div class="items">
+    <div class="item"><span class="bul"></span><span>Token compiler (tokens &rarr; CSS)</span></div>
+    <div class="item"><span class="bul"></span><span>Four deterministic templates</span></div>
+    <div class="item"><span class="bul"></span><span>Headless-Chrome renderer</span></div>
+    <div class="item"><span class="bul"></span><span>Sora font, <em>embedded</em> and offline</span></div>
+    <div class="item"><span class="bul"></span><span>ECharts, bundled locally</span></div>
+  </div>
+  <div class="spacer"></div>
+  <div class="footer"><span>@yourhandle · Your tagline here</span><span>LIST</span></div>
+</div>
+</body></html>

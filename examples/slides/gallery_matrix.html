@@ -1,0 +1,43 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+/*@BRAND_CSS@*/
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden;font-family:var(--font-family-body)}
+.board{width:1080px;height:1350px;position:relative;background:var(--color-bg-page);
+  padding:var(--spacing-64);display:flex;flex-direction:column}
+.kicker{font-size:var(--font-size-kicker);font-weight:var(--font-weight-bold);letter-spacing:.08em;
+  text-transform:uppercase;color:var(--color-bg-accent)}
+.h{font-family:var(--font-family-heading);font-weight:var(--font-weight-bold);
+  font-size:var(--font-size-headline);line-height:1.04;margin-top:var(--spacing-24);
+  color:var(--color-text-default)}
+.spacer{flex:1}
+.yaxis{font-size:var(--font-size-body);font-weight:var(--font-weight-semibold);
+  color:var(--color-text-muted);margin-bottom:var(--spacing-12)}
+.grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:var(--spacing-16)}
+.cell{background:var(--color-bg-surface);border:var(--border-width) solid var(--color-border-subtle);
+  border-radius:var(--radius-tile);padding:var(--spacing-32);min-height:230px;display:flex;
+  align-items:flex-end;font-size:var(--font-size-subhead);font-weight:var(--font-weight-semibold);
+  color:var(--color-text-default)}
+.cell.target{background:var(--color-bg-accent);border-color:var(--color-bg-accent);
+  color:var(--color-text-on-accent);font-weight:var(--font-weight-bold)}
+.xaxis{display:flex;justify-content:space-between;font-size:var(--font-size-body);
+  font-weight:var(--font-weight-semibold);color:var(--color-text-muted);margin-top:var(--spacing-12)}
+.footer{position:absolute;left:var(--spacing-64);right:var(--spacing-64);bottom:var(--spacing-40);
+  display:flex;justify-content:space-between;font-size:var(--font-size-caption);
+  font-weight:var(--font-weight-medium);color:var(--color-text-muted)}
+</style></head><body>
+<div class="board">
+  <div class="kicker">MATRIX</div>
+  <div class="h">Where each tool lands.</div>
+  <div class="spacer"></div>
+  <div class="yaxis">&uarr; Flexible</div>
+  <div class="grid">
+    <div class="cell">Custom scripts</div>
+    <div class="cell target">Slidesmith</div>
+    <div class="cell">Manual design</div>
+    <div class="cell">Rigid templates</div>
+  </div>
+  <div class="xaxis"><span>Slow &larr;</span><span>&rarr; Fast</span></div>
+  <div class="spacer"></div>
+  <div class="footer"><span>@yourhandle · Your tagline here</span><span>MATRIX</span></div>
+</div>
+</body></html>

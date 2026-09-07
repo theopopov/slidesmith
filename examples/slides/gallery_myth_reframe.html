@@ -1,0 +1,45 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+/*@BRAND_CSS@*/
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden;font-family:var(--font-family-body)}
+.board{width:1080px;height:1350px;position:relative;background:var(--color-bg-page);
+  padding:var(--spacing-64);display:flex;flex-direction:column}
+.kicker{font-size:var(--font-size-kicker);font-weight:var(--font-weight-bold);letter-spacing:.08em;
+  text-transform:uppercase;color:var(--color-bg-accent)}
+.spacer{flex:1}
+.row{border-radius:var(--radius-card);padding:var(--spacing-48)}
+.myth{background:var(--color-bg-surface);border:var(--border-width) solid var(--color-border-subtle)}
+.myth .lab{font-size:var(--font-size-kicker);font-weight:var(--font-weight-bold);letter-spacing:.06em;
+  text-transform:uppercase;color:var(--color-text-muted)}
+.myth .txt{font-family:var(--font-family-heading);font-weight:var(--font-weight-semibold);
+  font-size:var(--font-size-subhead);line-height:1.15;color:var(--color-text-muted);
+  text-decoration:line-through;text-decoration-color:var(--color-status-down);
+  text-decoration-thickness:3px;margin-top:var(--spacing-16)}
+.arrow{align-self:center;color:var(--color-text-highlight);font-size:48px;
+  margin:var(--spacing-24) 0;line-height:0}
+.real{background:var(--color-bg-dark);color:var(--color-text-on-dark)}
+.real .lab{font-size:var(--font-size-kicker);font-weight:var(--font-weight-bold);letter-spacing:.06em;
+  text-transform:uppercase;color:var(--color-text-highlight)}
+.real .txt{font-family:var(--font-family-heading);font-weight:var(--font-weight-bold);
+  font-size:var(--font-size-headline);line-height:1.08;margin-top:var(--spacing-16)}
+.real .txt em{font-style:normal;color:var(--color-text-highlight)}
+.footer{position:absolute;left:var(--spacing-64);right:var(--spacing-64);bottom:var(--spacing-40);
+  display:flex;justify-content:space-between;font-size:var(--font-size-caption);
+  font-weight:var(--font-weight-medium);color:var(--color-text-muted)}
+</style></head><body>
+<div class="board">
+  <div class="kicker">MYTH &rarr; REALITY</div>
+  <div class="spacer"></div>
+  <div class="row myth">
+    <div class="lab">The myth</div>
+    <div class="txt">On-brand social graphics need a heavy design app.</div>
+  </div>
+  <div class="arrow">&#9660;</div>
+  <div class="row real">
+    <div class="lab">The reality</div>
+    <div class="txt">They need <em>tokens</em> and a browser.</div>
+  </div>
+  <div class="spacer"></div>
+  <div class="footer"><span>@yourhandle · Your tagline here</span><span>MYTH REFRAME</span></div>
+</div>
+</body></html>

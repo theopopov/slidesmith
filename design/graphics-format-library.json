@@ -1,0 +1,61 @@
+{
+  "_comment": "Graphics FRAMES for the PLAN step. A frame fixes the canvas (aspect + pixels), the ordered slide roles, per-role copy_char_budget, and which message layouts are allowed. Default frame is carousel_narrative at 4:5 (1080x1350). Square (1:1, 1080x1080) frames are for single graphics. render sizes are passed straight to engine/render.py --size and engine/graphics_templates.py --size.",
+  "schema_version": "1.0.0",
+  "default_frame": "carousel_narrative",
+  "aspect_sizes": {
+    "4:5": "1080,1350",
+    "1:1": "1080,1080"
+  },
+  "frames": {
+    "carousel_narrative": {
+      "intent": "The general-purpose carousel: hook -> core message -> ask. Default for most posts.",
+      "aspect_ratio": "4:5",
+      "pixel_dimensions": "1080,1350",
+      "min_slides": 3,
+      "max_slides": 8,
+      "slide_roles": [
+        {"role": "cover", "copy_char_budget": 90},
+        {"role": "message", "copy_char_budget": 200,
+          "allowed_layouts": ["useful_drop", "stack_diagram", "stat", "proportion", "statement", "definition", "quote", "progression", "problem_solution", "list"]},
+        {"role": "cta", "copy_char_budget": 60}
+      ]
+    },
+    "carousel_listicle": {
+      "intent": "Ordered / graded lists and how-tos (steps-heavy).",
+      "aspect_ratio": "4:5",
+      "pixel_dimensions": "1080,1350",
+      "min_slides": 3,
+      "max_slides": 8,
+      "slide_roles": [
+        {"role": "cover", "copy_char_budget": 90},
+        {"role": "message", "copy_char_budget": 200,
+          "allowed_layouts": ["steps", "list", "useful_drop", "stat", "statement"]},
+        {"role": "cta", "copy_char_budget": 60}
+      ]
+    },
+    "carousel_comparison": {
+      "intent": "Contrast decks (this-vs-that, alternative-to-X, myth-bust).",
+      "aspect_ratio": "4:5",
+      "pixel_dimensions": "1080,1350",
+      "min_slides": 4,
+      "max_slides": 8,
+      "slide_roles": [
+        {"role": "cover", "copy_char_budget": 90},
+        {"role": "message", "copy_char_budget": 200,
+          "allowed_layouts": ["comparison", "matrix", "myth_reframe", "progression", "useful_drop", "stat", "statement"]},
+        {"role": "cta", "copy_char_budget": 60}
+      ]
+    },
+    "single": {
+      "intent": "A single, standalone graphic (no carousel): one strong frame for a post or an image.",
+      "aspect_ratio": "1:1",
+      "pixel_dimensions": "1080,1080",
+      "min_slides": 1,
+      "max_slides": 1,
+      "slide_roles": [
+        {"role": "message", "copy_char_budget": 200,
+          "allowed_layouts": ["useful_drop", "stat", "statement", "stack_diagram", "comparison", "myth_reframe"]}
+      ]
+    }
+  }
+}

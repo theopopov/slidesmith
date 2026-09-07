@@ -1,0 +1,30 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+/*@BRAND_CSS@*/
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden;font-family:var(--font-family-body)}
+.board{width:1080px;height:1350px;position:relative;background:var(--color-bg-dark);
+  padding:var(--spacing-64);display:flex;flex-direction:column;color:var(--color-text-on-dark)}
+.kicker{font-size:var(--font-size-kicker);font-weight:var(--font-weight-bold);letter-spacing:.08em;
+  text-transform:uppercase;color:var(--color-text-highlight)}
+.mark{font-family:var(--font-family-heading);font-weight:var(--font-weight-black);
+  font-size:280px;line-height:.6;color:var(--color-text-highlight);opacity:.22;height:150px}
+.spacer{flex:1}
+.quote{font-family:var(--font-family-heading);font-weight:var(--font-weight-bold);
+  font-size:var(--font-size-headline);line-height:1.12;letter-spacing:-.01em;max-width:20ch}
+.quote em{font-style:normal;color:var(--color-text-highlight)}
+.attr{font-size:var(--font-size-body);color:var(--color-text-on-dark);opacity:.75;
+  margin-top:var(--spacing-40)}
+.footer{position:absolute;left:var(--spacing-64);right:var(--spacing-64);bottom:var(--spacing-40);
+  display:flex;justify-content:space-between;font-size:var(--font-size-caption);
+  font-weight:var(--font-weight-medium);color:var(--color-text-on-dark);opacity:.75}
+</style></head><body>
+<div class="board">
+  <div class="kicker">QUOTE</div>
+  <div class="mark">&ldquo;</div>
+  <div class="spacer"></div>
+  <div class="quote">Design systems are <em>constraints</em> you are glad to have.</div>
+  <div class="attr">— a maintainer, on shipping on-brand by default</div>
+  <div class="spacer"></div>
+  <div class="footer"><span>@yourhandle · Your tagline here</span><span>QUOTE</span></div>
+</div>
+</body></html>

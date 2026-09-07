@@ -1,0 +1,10 @@
+# Slidesmith has NO Python package dependencies.
+#
+# The graphics stage is pure Python standard library (argparse, base64, json,
+# os, subprocess, sys, tempfile, pathlib). Tested on Python 3.9+.
+#
+# The only system-level prerequisite is a Chrome / Chromium binary for headless
+# rasterization (see README "Prerequisites" and .env.example CHROME_BIN).
+#
+# This file is intentionally dependency-free; `pip install -r requirements.txt`
+# is a no-op and is not required to run Slidesmith.

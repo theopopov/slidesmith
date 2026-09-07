@@ -1,0 +1,11 @@
+{
+  "eyebrow": "FOOTPRINT",
+  "figure": "3",
+  "figure_label": "scripts",
+  "caption": "The whole engine: compile tokens, build templates, rasterize. Zero runtime dependencies.",
+  "chart": {
+    "categories": ["render.py", "tokens_to_css.py", "graphics_templates.py"],
+    "values": [74, 110, 289],
+    "colors": ["context", "context", "accent"]
+  }
+}

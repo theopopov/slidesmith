@@ -1,0 +1,45 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+/*@BRAND_CSS@*/
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden;font-family:var(--font-family-body)}
+.board{width:1080px;height:1350px;position:relative;background:var(--color-bg-dark);
+  padding:var(--spacing-64);display:flex;flex-direction:column;color:var(--color-text-on-dark)}
+.kicker{font-size:var(--font-size-kicker);font-weight:var(--font-weight-bold);letter-spacing:.08em;
+  text-transform:uppercase;color:var(--color-text-highlight)}
+.h{font-family:var(--font-family-heading);font-weight:var(--font-weight-bold);
+  font-size:var(--font-size-headline);line-height:1.04;letter-spacing:-.01em;margin-top:var(--spacing-24);
+  max-width:16ch}
+.spacer{flex:1}
+.flow{display:flex;flex-direction:column;gap:var(--spacing-20)}
+.tile{display:flex;align-items:center;gap:var(--spacing-24);
+  background:var(--color-ink-800);border:var(--border-width) solid var(--color-ink-700);
+  border-radius:var(--radius-tile);padding:var(--spacing-24) var(--spacing-32)}
+.tile .n{font-family:var(--font-family-heading);font-weight:var(--font-weight-black);
+  font-size:var(--font-size-subhead);color:var(--color-slate-300);width:1.4ch}
+.tile .lab{font-size:var(--font-size-subhead);font-weight:var(--font-weight-semibold)}
+.tile.hot{background:var(--color-bg-accent);border-color:var(--color-bg-accent)}
+.tile.hot .n,.tile.hot .lab{color:var(--color-text-on-accent)}
+.arrow{align-self:center;color:var(--color-text-highlight);font-size:32px;line-height:0}
+.footer{position:absolute;left:var(--spacing-64);right:var(--spacing-64);bottom:var(--spacing-40);
+  display:flex;justify-content:space-between;font-size:var(--font-size-caption);
+  font-weight:var(--font-weight-medium);color:var(--color-text-on-dark);opacity:.75}
+</style></head><body>
+<div class="board">
+  <div class="kicker">THE STACK</div>
+  <div class="h">Five stages. One command runs them.</div>
+  <div class="spacer"></div>
+  <div class="flow">
+    <div class="tile"><span class="n">1</span><span class="lab">tokens.json</span></div>
+    <div class="arrow">&#9660;</div>
+    <div class="tile"><span class="n">2</span><span class="lab">compile &rarr; brand.css</span></div>
+    <div class="arrow">&#9660;</div>
+    <div class="tile hot"><span class="n">3</span><span class="lab">author HTML slide</span></div>
+    <div class="arrow">&#9660;</div>
+    <div class="tile"><span class="n">4</span><span class="lab">render (headless Chrome)</span></div>
+    <div class="arrow">&#9660;</div>
+    <div class="tile"><span class="n">5</span><span class="lab">1080&times;1350 PNG</span></div>
+  </div>
+  <div class="spacer"></div>
+  <div class="footer"><span>@yourhandle · Your tagline here</span><span>03 / 06</span></div>
+</div>
+</body></html>
