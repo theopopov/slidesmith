@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2026 Theo Popov
+# SPDX-License-Identifier: MIT
 """tokens_to_css.py — compile design/tokens.json → design/brand.css (CSS custom properties).
 
 The design system stays the single source of truth: tokens.json is compiled here into

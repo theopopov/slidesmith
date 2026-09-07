@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2026 Theo Popov
+# SPDX-License-Identifier: MIT
 """render.py — rasterize a self-contained HTML file → 1080×1080 PNG via headless Chrome.
 
 You author an on-brand HTML slide (inline CSS from design/tokens.json via the /*@BRAND_CSS@*/

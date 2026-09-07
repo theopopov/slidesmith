@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2026 Theo Popov
+# SPDX-License-Identifier: MIT
 """graphics_templates.py — deterministic, on-brand slide builders (the basic path).
 
 Each builder returns a self-contained HTML document that inlines design/brand.css (design tokens ->
